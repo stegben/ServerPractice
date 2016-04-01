@@ -2,8 +2,8 @@ var express = require("express");
 var app = express();
 var router = express.Router();
 
-router.use("/", function(rep, res){
-  res.send("Hello World!")
+router.get("/", function(rep, res){
+  res.send("<h1>Home page</h1>")
 });
 
 app.use("/", router);
