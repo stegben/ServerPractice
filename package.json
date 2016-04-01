@@ -1,0 +1,25 @@
+{
+  "name": "server-practice",
+  "version": "0.1.0",
+  "description": "Practice server by express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stegben/ServerPractice.git"
+  },
+  "keywords": [
+    "express"
+  ],
+  "author": "cph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stegben/ServerPractice/issues"
+  },
+  "homepage": "https://github.com/stegben/ServerPractice#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
