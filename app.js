@@ -1,6 +1,9 @@
 var express = require("express");
+var bodyParser = require("body-parser");
+
 var app = express();
 var router = express.Router();
+
 
 router.get("/", function(req, res){
   res.send("<h1>Home page</h1>");
@@ -22,6 +25,13 @@ router.get("/api/user/:id", function(req, res){
   } else {
     res.status(404).send("<h1>Wrong user ID<h1>");
   };
+});
+
+router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
+
+router.post("/api/body", function(req, res){
+  res.send(JSON.stringify(req.body));
 });
 
 router.use(function(req, res){
