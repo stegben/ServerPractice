@@ -14,5 +14,15 @@ router.get("/api/query", function(req, res){
   res.json(res_json);
 });
 
+router.get("/api/user/:id", function(req, res){
+  if (req.params.id === '1') {
+    res.json({ id: 1, name: "Joe", age: 18 });
+  } else if (req.params.id === '2') {
+    res.json({ id: 2, name: "John", age: 22 });
+  } else {
+    res.status(404).send("<h1>Wrong user ID<h1>");
+  };
+});
+
 app.use("/", router);
 app.listen(8080);
