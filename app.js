@@ -24,5 +24,9 @@ router.get("/api/user/:id", function(req, res){
   };
 });
 
+router.use(function(req, res){
+  res.status(404).send("<h3>wrong address<h3>")
+});
+
 app.use("/", router);
 app.listen(8080);
